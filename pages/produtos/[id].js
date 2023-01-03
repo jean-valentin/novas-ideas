@@ -41,5 +41,5 @@ function Produtos(props) {
 export default Produtos;
 
 function delay(ms) {
-    return new Promisse(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
