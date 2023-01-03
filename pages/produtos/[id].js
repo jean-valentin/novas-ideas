@@ -1,5 +1,5 @@
 export async function getServerSideProps(context) {
-    const id = router.query.id;
+    const id = context.query.id;
 
     return {
         props: {
@@ -9,7 +9,7 @@ export async function getServerSideProps(context) {
 }
 
 function Produtos(props) {
-    return (<div>Id do produto: {props.id}</div>)
+    return <div>Id do produto: {props.id}</div>
 }
 
 export default Produtos;
