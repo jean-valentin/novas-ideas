@@ -23,7 +23,7 @@ function Contador() {
             <button onClick={adicionarContador}>Acicionar</button>
         </div>
     )
-        
+     
     
 }
 
