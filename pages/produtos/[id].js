@@ -1,5 +1,30 @@
-export async function getServerSideProps(context) {
-    const id = context.query.id;
+// export async function getServerSideProps(context) {
+//     const id = context.query.id;
+
+//     return {
+//         props: {
+//             id: id
+//         }
+//     }
+// }
+
+export async function getStaticPaths() {
+    return {
+        paths: [{
+            params: {
+                id: '1'
+            }
+         },{
+            params: {
+                id: '2'
+            }
+        }],
+        fallback: false
+    }
+}
+
+export async function getStaticProps(context) {
+    const id = context.params.id;
 
     return {
         props: {
@@ -9,7 +34,7 @@ export async function getServerSideProps(context) {
 }
 
 function Produtos(props) {
-    return <div>Id do produto: {props.id}</div>
+    return (<div>Id do produto: {props.id}</div>)
 }
 
 export default Produtos;
